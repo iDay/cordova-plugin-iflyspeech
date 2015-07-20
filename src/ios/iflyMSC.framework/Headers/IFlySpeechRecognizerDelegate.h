@@ -13,6 +13,11 @@
  
  在使用语音识别时，需要实现这个协议中的方法.
  */
+
+/** 构建语法结束block*/
+typedef void(^IFlyOnBuildFinishCompletionHandler)(NSString* grammarId,IFlySpeechError * error);
+
+
 @protocol IFlySpeechRecognizerDelegate <NSObject>
 
 @required

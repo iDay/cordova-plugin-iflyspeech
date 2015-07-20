@@ -45,6 +45,10 @@
 -(BOOL) setParameter:(NSString *) value forKey:(NSString*)key;
 
 /** 获取合成参数
+ */
+-(NSString*) parameterForKey:(NSString *)key;
+
+/** 获取合成参数
  
  @param key 参数名称
  */
@@ -58,6 +62,16 @@
  @param text 合成的文本,最大的字节数为1k
  */
 - (void) startSpeaking:(NSString *)text;
+
+
+/** 开始合成不播放
+ 
+ 调用此函数进行合成，如果发生错误会回调错误`onCompleted`
+ @param text  合成的文本,最大的字节数为1k
+ @param toUri 合成后，保存在本地的音频路径
+ */
+-(void)synthesize:(NSString *)text toUri:(NSString*)uri;
+
 
 /** 暂停播放
  
