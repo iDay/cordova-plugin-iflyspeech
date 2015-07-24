@@ -12,6 +12,7 @@ import org.json.JSONTokener;
 
 import android.text.TextUtils;
 import android.util.Log;
+import android.os.Bundle;
 
 import com.iflytek.cloud.ErrorCode;
 import com.iflytek.cloud.LexiconListener;
