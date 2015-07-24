@@ -59,7 +59,7 @@ public class Speech extends CordovaPlugin implements RecognizerListener, Synthes
     public static final String EVENT_BUFFER_PROGRESS = "BufferProgress";
     
     // TODO: always replace the appId and the SDK with what you get from voicecloud.cn
-    private static final String SPEECH_APP_ID = "55a609ea";
+    private static final String SPEECH_APP_ID = "5563d784";
     
     private CallbackContext callback;
     private SpeechRecognizer recognizer;
