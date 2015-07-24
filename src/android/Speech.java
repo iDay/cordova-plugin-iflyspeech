@@ -416,12 +416,12 @@ public class Speech extends CordovaPlugin implements RecognizerListener, Synthes
     }
 
     @Override
-    public void onEvent(int eventType, int arg1, int arg2, String msg) {
+    public void onEvent(int eventType, int arg1, int arg2, Bundle msg) {
         Log.d(this.getClass().getName(), "onEvent " + eventType + " " + arg1 + " " + arg2 + " " + msg);
         // fireEvent(EVENT_SPEECH_ERROR);
 
     }
-
+    
     @Override
     public void onResult(RecognizerResult result, boolean islast) {
         JSONObject obj = new JSONObject();
