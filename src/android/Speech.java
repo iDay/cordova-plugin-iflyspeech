@@ -290,7 +290,8 @@ public class Speech extends CordovaPlugin implements RecognizerListener, Synthes
             }
         }
 
-        sp.startSpeaking(text, this);
+        /*int code = */sp.startSpeaking(text, this);
+//        callbackContext.error(code);
     }
 
     private void pauseSpeaking(CallbackContext callbackContext) {
@@ -438,7 +439,7 @@ public class Speech extends CordovaPlugin implements RecognizerListener, Synthes
     }
 
     @Override
-    public void onVolumeChanged(int volume) {
+    public void onVolumeChanged(int volume, byte[] data) {
         JSONObject obj = new JSONObject();
         try {
             obj.put(STR_EVENT, EVENT_VOLUME_CHANGED);
